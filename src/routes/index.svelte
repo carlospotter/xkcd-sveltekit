@@ -60,25 +60,22 @@
 
 
 <!-- HTML -->
-<h1>XKCD</h1>
-<!-- <p>{comic.title}</p>
+<h1 class="text-center text-4xl" style="font-family: 'Shadows Into Light', cursive;">XKCD</h1>
 
-<img src={comic.img} alt="comic"> -->
-
-<div>
-    <button class="btnPrev" on:click={() => prevComic(comic.num)}>
+<div class="max-w-4xl mx-auto my-5 grid grid-cols-4">
+    <button class="w-20 mx-auto text-2xl border border-black rounded" style="font-family: 'Shadows Into Light', cursive;" on:click={() => prevComic(comic.num)}>
         Previous
     </button>
 
-    <button class="btnLast" on:click={() => fetchComic("last")}>
-        Last
-    </button>
-    
-    <button class="btnRandom" on:click={() => fetchComic("random")}>
+    <button class="w-20 mx-auto text-2xl border border-black rounded" style="font-family: 'Shadows Into Light', cursive;" on:click={() => fetchComic("random")}>
         Random
     </button>
 
-    <button class="btnNext" on:click={() => nextComic(comic.num)}>
+    <button class="w-20 mx-auto text-2xl border border-black rounded" style="font-family: 'Shadows Into Light', cursive;" on:click={() => fetchComic("last")}>
+        Last
+    </button>
+    
+    <button class="w-20 mx-auto text-2xl border border-black rounded" style="font-family: 'Shadows Into Light', cursive;" on:click={() => nextComic(comic.num)}>
         Next
     </button>
 </div>
@@ -86,9 +83,3 @@
 <ComicCard xkcdComic = {comic}></ComicCard>
 
 <!-- CSS -->
-<style>
-    /* TODO: Add Tailwind CSS to the project */
-    h1 {
-        text-align: center;
-    }
-</style>

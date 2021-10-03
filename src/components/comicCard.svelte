@@ -5,10 +5,10 @@
 
 
 <!-- HTML -->
-<div>
-    <p>{xkcdComic.num} - {xkcdComic.title}</p>
+<div class="mt-5">
+    <p class="text-3xl text-center" style="font-family: 'Shadows Into Light', cursive;">{xkcdComic.num} - {xkcdComic.title}</p>
 
-    <img src={xkcdComic.img} alt="comic">
+    <img class="mx-auto object-contain my-3" src={xkcdComic.img} alt="comic">
 </div>
 
 
