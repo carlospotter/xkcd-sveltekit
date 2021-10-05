@@ -1,7 +1,6 @@
 <!-- JS -->
 <script context="module">
     export async function load() {
-        // TODO: Environment variables:
         const apiUrl = `http://localhost:3000/api/last`;
 
         let comic = await fetch(apiUrl).then(res => res.json());
@@ -22,8 +21,7 @@
     export let lastComic;
 
     const fetchComic = async (type) => {
-        // TODO: Environment variables:
-        const apiUrl = `http://localhost:3000/api/` + type;
+        const apiUrl = `api/` + type;
         const res = await fetch(apiUrl)
 
         comic = await res.json();
@@ -36,22 +34,25 @@
     }   
     
     const prevComic = async (num) => {
-        // TODO: Environment variables:
-        if (num > 1){
-            const apiUrl = `http://localhost:3000/api/` + (num - 1);
+        if (num > 1) {
+            const apiUrl = `api/` + (num - 1);
             const res = await fetch(apiUrl)
 
             comic = await res.json();    
+        } else {
+            console.log("This is the first comic!")
         }
+
     }
 
     const nextComic = async (num) => {
-        // TODO: Environment variables:
         if (num < lastComic) {
-            const apiUrl = `http://localhost:3000/api/` + (num + 1);
+            const apiUrl = `api/` + (num + 1);
             const res = await fetch(apiUrl)
 
             comic = await res.json();    
+        } else {
+            console.log("This is the last comic!")
         }
     }
 
@@ -60,9 +61,8 @@
 
 
 <!-- HTML -->
-<h1 class="text-center text-4xl" style="font-family: 'Shadows Into Light', cursive;">XKCD</h1>
 
-<div class="max-w-4xl mx-auto my-5 grid grid-cols-4">
+<div class="max-w-2xl mx-auto my-8 grid grid-cols-4">
     <button class="w-20 mx-auto text-2xl border border-black rounded" style="font-family: 'Shadows Into Light', cursive;" on:click={() => prevComic(comic.num)}>
         Previous
     </button>
