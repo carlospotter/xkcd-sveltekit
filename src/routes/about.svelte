@@ -1,9 +1,10 @@
 <p class="text-center text-2xl mt-10" style="font-family: 'Shadows Into Light', cursive;">    
     
-    This very simple website is built with Sveltekit and Tailwind CSS for learning (and fun) purposes. You can find the source code <a href="https://github.com/carlospotter/xkcd-sveltekit" target="_blank">here</a>.
+    This very simple website is built with Sveltekit and Tailwind CSS for learning (and fun) purposes. 
 
 </p>
 
+<!-- You can find the source code <a href="https://github.com/carlospotter/xkcd-sveltekit" target="_blank">here</a>. -->
 
 <p class="text-center text-2xl mt-5" style="font-family: 'Shadows Into Light', cursive;">    
     
