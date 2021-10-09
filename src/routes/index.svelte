@@ -61,22 +61,31 @@
 
 
 <!-- HTML -->
-
-<div class="max-w-2xl mx-auto my-8 grid grid-cols-4">
-    <button class="w-20 mx-auto text-2xl border border-black rounded" style="font-family: 'Shadows Into Light', cursive;" on:click={() => prevComic(comic.num)}>
-        Previous
-    </button>
-
+<div class="max-w-2xl mx-auto my-8 grid grid-cols-1 sm:hidden">
     <button class="w-20 mx-auto text-2xl border border-black rounded" style="font-family: 'Shadows Into Light', cursive;" on:click={() => fetchComic("random")}>
         Random
     </button>
+</div>
 
-    <button class="w-20 mx-auto text-2xl border border-black rounded" style="font-family: 'Shadows Into Light', cursive;" on:click={() => fetchComic("last")}>
-        Last
+<div class="max-w-2xl mx-auto my-8 grid grid-cols-4 sm:grid-cols-5">
+    <button class="w-16 mx-auto text-2xl border border-black rounded" style="font-family: 'Shadows Into Light', cursive;" on:click={() => prevComic(2)}>
+        First
     </button>
-    
-    <button class="w-20 mx-auto text-2xl border border-black rounded" style="font-family: 'Shadows Into Light', cursive;" on:click={() => nextComic(comic.num)}>
-        Next
+
+    <button class="w-16 mx-auto text-2xl border border-black rounded" style="font-family: 'Shadows Into Light', cursive;" on:click={() => prevComic(comic.num)}>
+        ←
+    </button>
+
+    <button class="w-20 mx-auto text-2xl border hidden sm:block border-black rounded" style="font-family: 'Shadows Into Light', cursive;" on:click={() => fetchComic("random")}>
+        Random
+    </button>
+
+    <button class="w-16 mx-auto text-2xl border border-black rounded" style="font-family: 'Shadows Into Light', cursive;" on:click={() => nextComic(comic.num)}>
+        →
+    </button>
+
+    <button class="w-16 mx-auto text-2xl border border-black rounded" style="font-family: 'Shadows Into Light', cursive;" on:click={() => fetchComic("last")}>
+        Last
     </button>
 </div>
 
