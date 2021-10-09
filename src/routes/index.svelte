@@ -1,7 +1,7 @@
 <!-- JS -->
 <script context="module">
     export async function load({ fetch }) {
-        const apiUrl = `api/random`;
+        const apiUrl = `api/last`;
 
         let comic = await fetch(apiUrl).then(res => res.json());
 
