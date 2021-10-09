@@ -1,6 +1,6 @@
 <!-- JS -->
 <script context="module">
-    export async function load() {
+    export async function load({ fetch }) {
         const apiUrl = `api/last`;
 
         let comic = await fetch(apiUrl).then(res => res.json());
