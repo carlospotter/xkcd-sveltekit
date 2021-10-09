@@ -1,7 +1,7 @@
 <!-- JS -->
 <script context="module">
     export async function load() {
-        const apiUrl = `http://localhost:3000/api/last`;
+        const apiUrl = `api/last`;
 
         let comic = await fetch(apiUrl).then(res => res.json());
 
